@@ -2,18 +2,34 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:i18n="http://namespaces.zope.org/i18n"
-    xmlns:monkey="http://namespaces.plone.org/monkey"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="collective.stickyitem">
 
   <five:registerPackage package="." initialize=".initialize" />
   <i18n:registerTranslations directory="locales" />
   <include package="archetypes.schemaextender" />
 
-  <adapter
-    for="Products.ATContentTypes.interfaces.IATNewsItem"
-    factory=".schemaextender.SortingDate"
-    provides="archetypes.schemaextender.interfaces.ISchemaExtender" />
+  <five:implements
+    class="Products.ATContentTypes.content.newsitem.ATNewsItem"
+    interface=".schemaextender.IStickyItem"
+    />
 
   <adapter factory=".schemaextender.my_effective" name="effective" />
+
+  <genericsetup:registerProfile
+    name="default"
+    title="Sticky Item"
+    directory="profiles/default"
+    description=""
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+  <genericsetup:registerProfile
+    name="uninstall"
+    title="Sticky Item uninstall"
+    directory="profiles/uninstall"
+    description=""
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
 
 </configure>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<import-steps>
+ <import-step id="stickyitem_uninstall" version="20110121-01"
+              handler="collective.stickyitem.setuphandlers.uninstall"
+              title="Sticky Item uninstallation">
+  Sticky Item uninstallation
+ </import-step>
+</import-steps>

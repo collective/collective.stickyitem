@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<componentregistry purge="False">
+  <adapters>
+    <adapter
+      name="collective.stickyitem.StickyItem"
+      for_="collective.stickyitem.schemaextender.IStickyItem"
+      provides="archetypes.schemaextender.interfaces.ISchemaExtender"
+      factory="collective.stickyitem.schemaextender.SortingDate"/>
+  </adapters>
+</componentregistry>
