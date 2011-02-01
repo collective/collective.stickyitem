@@ -17,3 +17,4 @@ Development
 
 This product was developed by Quintagroup for Plone collective, sponsored by 
 Headnet company http://headnet.dk/.
+
