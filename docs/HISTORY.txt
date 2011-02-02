@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.0.3
+-------------------
+
+- fixed issue with default date
+
 1.0.2
 -------------------
 
