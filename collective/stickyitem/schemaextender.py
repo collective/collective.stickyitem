@@ -33,6 +33,7 @@ class SortingDate(object):
             schemata = "default",
             default_method = "effective",
             widget = CalendarWidget(
+                    label = _(u'label_sortingdate', default=u'Sorting Date'),
                 ),
             ),
 
