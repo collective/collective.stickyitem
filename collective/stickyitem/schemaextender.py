@@ -30,14 +30,13 @@ class SortingDate(object):
 
     _fields = [
         SortingDateField("sortingdate",
-            schemata = "default",
-            widget = CalendarWidget(
-                    label = _(u'label_sortingdate', default=u'Sorting Date'),
+            schemata="dates",
+            widget=CalendarWidget(
+                    label=_(u'label_sortingdate', default=u'Sorting Date'),
                 ),
             ),
 
         ]
-
 
     def __init__(self, context):
         self.context = context
